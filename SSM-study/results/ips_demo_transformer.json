@@ -1,0 +1,229 @@
+{
+  "model": "TRANSFORMER",
+  "n_samples": 2000,
+  "device": "cuda",
+  "summary": {
+    "total_events": 2000,
+    "action_breakdown": {
+      "ALLOW": 0.309,
+      "ALERT": 0.3975,
+      "RATE_LIMIT": 0.275,
+      "BLOCK": 0.0185
+    },
+    "class_breakdown": {
+      "Normal": 618,
+      "Generic": 439,
+      "Exploits": 218,
+      "Fuzzers": 294,
+      "DoS": 155,
+      "Reconnaissance": 85,
+      "Analysis": 47,
+      "Backdoor": 97,
+      "Shellcode": 43,
+      "Worms": 4
+    },
+    "block_rate": 0.0185,
+    "alert_rate": 0.3975
+  },
+  "sample_events": [
+    {
+      "timestamp": 1776431597.196747,
+      "predicted_class": "Generic",
+      "confidence": 0.9963,
+      "action": "RATE_LIMIT",
+      "source_id": "10.0.1.1",
+      "firewall_rule": "iptables -A INPUT -s 10.0.1.1 -m limit --limit 10/min -j ACCEPT # Rate-limited Generic (conf=0.996)"
+    },
+    {
+      "timestamp": 1776431597.1968956,
+      "predicted_class": "Backdoor",
+      "confidence": 0.8437,
+      "action": "RATE_LIMIT",
+      "source_id": "10.0.1.2",
+      "firewall_rule": "iptables -A INPUT -s 10.0.1.2 -m limit --limit 10/min -j ACCEPT # Rate-limited Backdoor (conf=0.844)"
+    },
+    {
+      "timestamp": 1776431597.19697,
+      "predicted_class": "DoS",
+      "confidence": 0.3054,
+      "action": "ALERT",
+      "source_id": "10.0.1.3",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.197018,
+      "predicted_class": "Generic",
+      "confidence": 0.9977,
+      "action": "RATE_LIMIT",
+      "source_id": "10.0.1.4",
+      "firewall_rule": "iptables -A INPUT -s 10.0.1.4 -m limit --limit 10/min -j ACCEPT # Rate-limited Generic (conf=0.998)"
+    },
+    {
+      "timestamp": 1776431597.1970527,
+      "predicted_class": "Fuzzers",
+      "confidence": 0.535,
+      "action": "ALERT",
+      "source_id": "10.0.1.5",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.197085,
+      "predicted_class": "Normal",
+      "confidence": 0.9442,
+      "action": "ALLOW",
+      "source_id": "10.0.1.6",
+      "firewall_rule": "# No firewall rule needed: action=ALLOW"
+    },
+    {
+      "timestamp": 1776431597.197089,
+      "predicted_class": "Exploits",
+      "confidence": 0.5521,
+      "action": "ALERT",
+      "source_id": "10.0.1.7",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1971216,
+      "predicted_class": "Fuzzers",
+      "confidence": 0.5678,
+      "action": "ALERT",
+      "source_id": "10.0.1.8",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1971555,
+      "predicted_class": "Exploits",
+      "confidence": 0.5353,
+      "action": "ALERT",
+      "source_id": "10.0.1.9",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1971903,
+      "predicted_class": "Exploits",
+      "confidence": 0.5664,
+      "action": "ALERT",
+      "source_id": "10.0.1.10",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1972241,
+      "predicted_class": "Normal",
+      "confidence": 0.9997,
+      "action": "ALLOW",
+      "source_id": "10.0.1.11",
+      "firewall_rule": "# No firewall rule needed: action=ALLOW"
+    },
+    {
+      "timestamp": 1776431597.1972275,
+      "predicted_class": "Normal",
+      "confidence": 1.0,
+      "action": "ALLOW",
+      "source_id": "10.0.1.12",
+      "firewall_rule": "# No firewall rule needed: action=ALLOW"
+    },
+    {
+      "timestamp": 1776431597.1972308,
+      "predicted_class": "Generic",
+      "confidence": 0.9989,
+      "action": "RATE_LIMIT",
+      "source_id": "10.0.1.13",
+      "firewall_rule": "iptables -A INPUT -s 10.0.1.13 -m limit --limit 10/min -j ACCEPT # Rate-limited Generic (conf=0.999)"
+    },
+    {
+      "timestamp": 1776431597.1972623,
+      "predicted_class": "Fuzzers",
+      "confidence": 0.615,
+      "action": "ALERT",
+      "source_id": "10.0.1.14",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1972914,
+      "predicted_class": "Fuzzers",
+      "confidence": 0.5516,
+      "action": "ALERT",
+      "source_id": "10.0.1.15",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1973233,
+      "predicted_class": "Fuzzers",
+      "confidence": 0.6424,
+      "action": "ALERT",
+      "source_id": "10.0.1.16",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1973608,
+      "predicted_class": "Backdoor",
+      "confidence": 0.3891,
+      "action": "ALERT",
+      "source_id": "10.0.1.17",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.1973958,
+      "predicted_class": "Exploits",
+      "confidence": 0.7685,
+      "action": "RATE_LIMIT",
+      "source_id": "10.0.1.18",
+      "firewall_rule": "iptables -A INPUT -s 10.0.1.18 -m limit --limit 10/min -j ACCEPT # Rate-limited Exploits (conf=0.769)"
+    },
+    {
+      "timestamp": 1776431597.1974268,
+      "predicted_class": "Reconnaissance",
+      "confidence": 0.9447,
+      "action": "ALERT",
+      "source_id": "10.0.1.19",
+      "firewall_rule": "# No firewall rule needed: action=ALERT"
+    },
+    {
+      "timestamp": 1776431597.19746,
+      "predicted_class": "Normal",
+      "confidence": 0.9999,
+      "action": "ALLOW",
+      "source_id": "10.0.1.20",
+      "firewall_rule": "# No firewall rule needed: action=ALLOW"
+    }
+  ],
+  "firewall_rules": [
+    "iptables -A INPUT -s 10.0.1.75 -j DROP # Blocked Exploits (conf=0.948)",
+    "iptables -A INPUT -s 10.0.1.83 -j DROP # Blocked Exploits (conf=0.903)",
+    "iptables -A INPUT -s 10.0.1.129 -j DROP # Blocked Exploits (conf=0.926)",
+    "iptables -A INPUT -s 10.0.1.166 -j DROP # Blocked Exploits (conf=0.958)",
+    "iptables -A INPUT -s 10.0.2.17 -j DROP # Blocked Exploits (conf=0.913)",
+    "iptables -A INPUT -s 10.0.2.116 -j DROP # Blocked Exploits (conf=0.851)",
+    "iptables -A INPUT -s 10.0.2.157 -j DROP # Blocked Exploits (conf=0.907)",
+    "iptables -A INPUT -s 10.0.2.162 -j DROP # Blocked Exploits (conf=0.916)",
+    "iptables -A INPUT -s 10.0.2.198 -j DROP # Blocked Exploits (conf=0.916)",
+    "iptables -A INPUT -s 10.0.2.204 -j DROP # Blocked Exploits (conf=0.890)",
+    "iptables -A INPUT -s 10.0.2.234 -j DROP # Blocked Backdoor (conf=0.905)",
+    "iptables -A INPUT -s 10.0.3.16 -j DROP # Blocked Exploits (conf=0.890)",
+    "iptables -A INPUT -s 10.0.3.50 -j DROP # Blocked DoS (conf=0.898)",
+    "iptables -A INPUT -s 10.0.3.153 -j DROP # Blocked Shellcode (conf=0.922)",
+    "iptables -A INPUT -s 10.0.3.248 -j DROP # Blocked Exploits (conf=0.951)",
+    "iptables -A INPUT -s 10.0.4.9 -j DROP # Blocked Exploits (conf=0.962)",
+    "iptables -A INPUT -s 10.0.4.24 -j DROP # Blocked Backdoor (conf=0.923)",
+    "iptables -A INPUT -s 10.0.4.86 -j DROP # Blocked Exploits (conf=0.852)",
+    "iptables -A INPUT -s 10.0.4.96 -j DROP # Blocked Exploits (conf=0.973)",
+    "iptables -A INPUT -s 10.0.5.117 -j DROP # Blocked Exploits (conf=0.904)",
+    "iptables -A INPUT -s 10.0.5.121 -j DROP # Blocked Exploits (conf=0.979)",
+    "iptables -A INPUT -s 10.0.5.203 -j DROP # Blocked Exploits (conf=0.946)",
+    "iptables -A INPUT -s 10.0.6.12 -j DROP # Blocked Exploits (conf=0.896)",
+    "iptables -A INPUT -s 10.0.6.46 -j DROP # Blocked Exploits (conf=0.880)",
+    "iptables -A INPUT -s 10.0.6.104 -j DROP # Blocked Exploits (conf=0.944)",
+    "iptables -A INPUT -s 10.0.6.178 -j DROP # Blocked Exploits (conf=0.874)",
+    "iptables -A INPUT -s 10.0.6.182 -j DROP # Blocked Exploits (conf=0.881)",
+    "iptables -A INPUT -s 10.0.7.11 -j DROP # Blocked Exploits (conf=0.980)",
+    "iptables -A INPUT -s 10.0.7.160 -j DROP # Blocked Exploits (conf=0.946)",
+    "iptables -A INPUT -s 10.0.7.173 -j DROP # Blocked Exploits (conf=0.882)",
+    "iptables -A INPUT -s 10.0.7.237 -j DROP # Blocked Exploits (conf=0.949)",
+    "iptables -A INPUT -s 10.0.8.10 -j DROP # Blocked DoS (conf=0.887)",
+    "iptables -A INPUT -s 10.0.8.76 -j DROP # Blocked Exploits (conf=0.958)",
+    "iptables -A INPUT -s 10.0.8.90 -j DROP # Blocked Exploits (conf=0.979)",
+    "iptables -A INPUT -s 10.0.8.110 -j DROP # Blocked DoS (conf=0.879)",
+    "iptables -A INPUT -s 10.0.8.118 -j DROP # Blocked Exploits (conf=0.977)",
+    "iptables -A INPUT -s 10.0.8.120 -j DROP # Blocked Exploits (conf=0.923)"
+  ]
+}
